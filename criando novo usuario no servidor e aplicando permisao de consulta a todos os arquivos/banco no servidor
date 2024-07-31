@@ -1,0 +1,12 @@
+/*criando novo usuario no servidor*/
+create user 'lara.rodriques'@'localhost' identified by '123456';
+create user 'izabella.oliveira'@'localhost' identified by '123456';
+create user 'luane.gabrielle'@'localhost' identified by '123456';
+create user 'tiagolima'@'localhost' identified by '123456';
+create user 'daniel.gomes'@'localhost' identified by '123456';
+
+/*aplicando permisao de consulta a todos os arquivos/banco no servidor*/
+grant select
+on *.*
+to tiagolima@localhost;
+show databases;
