@@ -1,0 +1,39 @@
+*criando novo usuario no servidor*/
+create user 'lara.rodriques'@'localhost' identified by '123456';
+create user 'izabella.oliveira'@'localhost' identified by '123456';
+create user 'luane.gabrielle'@'localhost' identified by '123456';
+create user 'tiagolima'@'localhost' identified by '123456';
+create user 'daniel.gomes'@'localhost' identified by '123456';
+
+/*aplicando permisao global de consulta a todos os arquivos/banco no servidor*/
+grant select
+on *.*
+to tiagolima@localhost;
+show databases;
+/*aplicando permisao de banco insercao em todas as tabelas do banco*/
+grant insert 
+on bd_caso_estudos_vendas.*
+to tiagolima@localhost;
+
+/*aplicando permisao de banco de insercao e atualizaçao em tabela definida  do banco*/
+grant insert
+on bd_caso_estudos_vendas.tb_prod
+to tiagolima@localhost;
+grant
+    select(cli_cod,cli_nome, cli_cpf),
+    update(cli_end_cep),
+    on bd_caso_estudos_vendas.tb_cli
+    to tiagolima@localhost;
+    /**/
+    grant insert, update, delete
+    on `bd_caso_estudos_vendas`.tb_func`
+    TO rootglocalhost;
+REVOKE INSERT, UPDATE
+ON `bd caso estudo vendas` "tb func”
+FROM rootglocalhost;
+
+grant delecte
+ON `bd caso estudo vendas` `tb func`
+
+revoke select 
+ON `bd caso estudo vendas` `tb func`
