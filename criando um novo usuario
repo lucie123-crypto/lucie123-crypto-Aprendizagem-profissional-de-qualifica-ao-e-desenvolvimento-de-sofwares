@@ -29,7 +29,7 @@ grant
     on `bd_caso_estudos_vendas`.tb_func`
     TO rootglocalhost;
 REVOKE INSERT, UPDATE
-ON `bd caso estudo vendas` "tb func”
+ON `bd caso estudo vendas` `tb func`
 FROM rootglocalhost;
 
 grant delecte
@@ -37,3 +37,10 @@ ON `bd caso estudo vendas` `tb func`
 
 revoke select 
 ON `bd caso estudo vendas` `tb func`
+
+grant insert
+ON `bd caso estudo vendas` `tb func`
+to rootglocalhost;
+
+
+
